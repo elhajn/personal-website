@@ -1,0 +1,13 @@
+[workspace]
+authors = ["Noha El-Haj <elhajn02@gmail.com>"]
+channels = ["conda-forge"]
+name = "personal-website"
+platforms = ["osx-arm64", "win-64", "osx-64", "linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.14.0,<3.15"
+flask = ">=3.1.2,<4"
+
