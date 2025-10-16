@@ -3,21 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %} {% endblock %}</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
     </head>
     <body>
         <header> 
-            <a href={{ url_for("home") }}>
+            <a href="{{ url_for("home") }}">
                 <h1>Noha El-Haj</h1>
             </a>
             {% block navbar %} {% endblock %}
         </header>
         {% block content %} {% endblock %}
         <footer>
-            <a href="https://www.linkedin.com/in/noha-el-haj-707b35329/">LinkedIn</a><br>
-            <a href="https://github.com/elhajn">GitHub</a><br>
-            &copy; 2025 Noha El-Haj
+            <a href="https://www.linkedin.com/in/noha-el-haj-707b35329/">
+                <img src="{{ url_for("static", filename="images/in-logo/InBug-White.png")}}" width=25 height=25 alt="LinkedIn 'in' logo with hyperlink to Noha's LinkedIn page">
+            </a>
+            <a href="https://github.com/elhajn">
+                <img src="{{ url_for("static", filename="images/github-mark/github-mark-white.svg")}}" width=25 height=25 alt="LinkedIn 'in' logo with hyperlink to Noha's LinkedIn page">
+            </a>
         </footer>
     </body>
 </html>

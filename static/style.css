@@ -1,0 +1,99 @@
+/* 
+colour palette from coolors.co:
+    mauve serenity:
+    --davys-gray: #565264ff;
+    --dim-gray: #706677ff;
+    --mountbatten-pink: #a6808cff;
+    --pale-dogwood: #ccb7aeff;
+    --timberwolf: #d6cfcbff; 
+*/
+
+@font-face {
+    font-family: "titleFont";
+    src: url("fonts/Montez-Regular.woff");
+    src: url("fonts/Montez-Regular.woff2");
+}
+
+@font-face {
+    font-family: "navbarFont";
+    src: url("fonts/Montserrat-Thin.woff");
+    src: url("fonts/Montserrat-Thin.woff2");
+}
+@font-face {
+    font-family: generalFont;
+    src: url("fonts/NotoSans-Thin.woff");
+    src: url("fonts/NotoSans-Thin.woff2");
+}
+
+body {
+    background-color: #d6cfcbff;
+    color: #706677ff;
+}
+
+h1 {
+    font-family: titleFont;
+    color: #565264ff;
+    text-transform: lowercase;
+}
+
+.home-page-title {
+    font-size: 25vw;
+    text-align: center;
+    padding: 0;
+    margin: 2vw;
+}
+
+.navbar a {
+    font-family: navbarFont;
+    color: #706677ff;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 1vw 1vw;
+    float: left;
+}
+
+.navbar a.active {
+    color: #a6808cff;
+}
+
+header {
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+header a {
+    text-decoration: none;
+}
+
+a {
+    font-family: generalFont;
+    display: flex;
+    display: -ms-flexbox;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+}
+
+a:hover {
+    color: #a6808cff;
+}
+
+footer {
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    padding-top: 10vw;
+}
+
+@media (max-width: 700px) {
+  body, .navbar {   
+    flex-direction: column;
+    text-align: center;
+  }
+}
