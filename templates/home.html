@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <a href="{{ url_for("about") }}">About</a>
+                <a href="{{ url_for("projects") }}">Projects</a>
+                <a href="{{ url_for("publications") }}">Publications</a>
+                <a href="{{ url_for("experience") }}">Experience</a>
+            </div>   
+        </header> 
+        <h1 class="home-page-title">Noha El-Haj</h1>
+        <a href="{{ url_for("about")}}">Explore</a>
+        <footer>
+            <a href="https://www.linkedin.com/in/noha-el-haj-707b35329/">
+                <img src="{{ url_for("static", filename="images/in-logo/InBug-White.png")}}" width=25 height=25 alt="LinkedIn 'in' logo with hyperlink to Noha's LinkedIn page">
+            </a>
+            <a href="https://github.com/elhajn">
+                <img src="{{ url_for("static", filename="images/github-mark/github-mark-white.svg")}}" width=25 height=25 alt="LinkedIn 'in' logo with hyperlink to Noha's LinkedIn page">
+            </a>
+        </footer>    
+    </body>
+</html>
