@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Publications | Noha El-Haj{% endblock %}
+
+{% block navbar %}
+    <ul class="navbar">
+        <li><a href="{{ url_for("about") }}">About</a></li>
+        <li><a href="{{ url_for("projects") }}">Projects</a></li>
+        <li><a class="active" href="{{ url_for("publications") }}">Publications</a></li>
+        <li><a href="{{ url_for("experience") }}">Experience</a></li>
+    </ul>
+{% endblock %}
