@@ -1,12 +1,90 @@
 {% extends "base.html" %}
-
 {% block title %}About | Noha El-Haj{% endblock %}
-
 {% block navbar %}
     <div class="navbar">
         <a class = "active" href="{{ url_for("about") }}">About</a>
         <a href="{{ url_for("projects") }}">Projects</a>
         <a href="{{ url_for("publications") }}">Publications</a>
         <a href="{{ url_for("experience") }}">Experience</a>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="main">
+        <p>
+            A clinical bioinformatics and kinesiology graduate based in Ontario, Canada looking to connect her passions for coding and health sciences.
+        </p>
+        <br>
+        <div class="left-col">
+            <h2>Background</h2>
+            <p>
+                <strong>BSc. Honours Kinesiology and Health Studies</strong><br>
+                <em>Minor in Biological Sciences</em><br>
+                GPA: 90.13%<br>
+                I chose this degree due to my interest in human anatomy and physiology. I love learning about biology and how the body works,
+                and found that this degree was the best way for me to learn about as many biological systems as I could, in a human context. 
+                I took a variety of courses, from endocrinology, nutrition and chronic disease & rehabilitation to research design and economic 
+                botany. I love to learn, and I made sure to take full advantage of the course offerings at my school and the flexibility that 
+                my degree gave me. This is also where I was exposed to coding and programming for the first time during an Introduction to 
+                Python course.
+                <br><br>
+                <strong>Graduate Certificate in Clinical Bioinformatics</strong><br>
+                <em>With Honours</em><br>
+                GPA: 94.30%<br>
+                After taking my first Python course during my Bachelor's, I wanted to find a career path that would allow me to combine my love
+                for biology and my new interest in coding. This lead me to the field of bioinformatics. I found a two-term program that would
+                provide a solid foundation via multiple bioinformatics-oriented Python, R, and BASH/Linux courses and an internship component.
+                Through my internship, I was also able to gain experience in web development. This, in combination with courses such as 
+                computational tools, machine learning and AI, and data analytics & storytelling, I now have a variety of tools and techniques in 
+                my arsenal that I can bring to the workforce.
+                <br><br>
+            </p>
+        </div>
+        <br>
+        <div class="right-col">
+            <h2>Skills</h2>
+            <label for="skills-filter">Filter:</label>
+            <select name="skills-filter" id="skills-filter">
+                <option value="none" selected>None</option>
+                <option value="pro-lang">Programming Languages</option>
+                <option value="bioinfo">Bioinformatics-Related</option>
+                <option value="soft">Soft Skills</option>
+            </select>
+            <ul class="skills" id="skills">
+                <li data-category="pro-lang">Python</li>
+                <li data-category="pro-lang">R</li>
+                <li data-category="pro-lang">BASH</li>
+                <li data-category="pro-lang">HTML</li>
+                <li data-category="pro-lang">CSS</li>
+                <li data-category="bioinfo">Differential Expression Analysis</li>
+                <li data-category="bioinfo">Pathway Enrichment Analysis</li>
+                <li data-category="bioinfo">R Shiny</li>
+                <li data-category="bioinfo">ggplot2</li>
+                <li data-category="bioinfo">Variant Calling</li>
+                <li data-category="bioinfo">Principal Component Analysis</li>
+                <li data-category="bioinfo">Nextflow</li>
+                <li data-category="soft">Scientific Writing</li>
+                <li data-category="soft">Written and Oral Communication</li>
+                <li data-category="soft">Teamwork</li>
+            </ul>
+            <script>
+                const filter = document.getElementById("skills-filter");
+                const skills = document.querySelectorAll("#skills li");
+
+                function filterSkills() {
+                    const selected = filter.value;
+                    skills.forEach(skill => {
+                        if (selected === "none" || skill.dataset.category === selected) {
+                            skill.classList.remove("hidden");
+                        } else {
+                            skill.classList.add("hidden")
+                        }
+                    });
+                }
+
+                filterSkills();
+                
+                filter.addEventListener("change", filterSkills);
+            </script>
+        </div>
     </div>
 {% endblock %}
